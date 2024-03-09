@@ -1,4 +1,7 @@
 import { React, useState } from "react";
+import './Task.css';
+import TaskItem from "./TaskItem";
+
 
 const Tasks = () => {
   const [state, setState] = useState("");
@@ -26,21 +29,18 @@ const Tasks = () => {
     <>
       <h1>Tasks</h1>
       <input
+        className="Input_tag"
         value={state}
         placeholder="write tasks..."
         onChange={handleChange}
       />
-      <button onClick={handleTask}>ADD Task</button>
+      <button className="Button_css"onClick={handleTask}>ADD Task</button>
       {/* <h2>{state}</h2> */}
       <div>
         {task.map((item, index) => {
           return (
             <>
-              <h2
-                style={index % 2 === 0 ? { color: "green" } : { color: "red" }}
-              >
-                {item.title}
-              </h2>
+             <TaskItem item={item} index={index}/>
             </>
           );
         })}

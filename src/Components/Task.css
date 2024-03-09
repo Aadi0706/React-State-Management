@@ -1,0 +1,14 @@
+.Input_tag {
+  width: 200px;
+  height: 29px;
+  border-radius: 10px;
+  font-size: 20px;
+  padding-left: 5px;
+}
+.Button_css {
+  height: 29px;
+  width: 200px;
+  font-size: 18px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
